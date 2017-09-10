@@ -4,6 +4,7 @@ import Adafruit_ADS1x15
 
 var = 1
 
+
 def log_values(ecg):
     conn = sqlite3.connect('ecg_data.db')  # It is important to provide an
     # absolute path to the database
@@ -17,15 +18,12 @@ def log_values(ecg):
     conn.close()
 
 
-while(var == 1):
+while var == 1:
 
     adc = Adafruit_ADS1x15.ADS1015()
     ecg_data = adc.read_adc(1, data_rate=250)
 
     if ecg_data is not None:
-       log_values(ecg_data)
+        log_values(ecg_data)
     else:
-       log_values(1024)
-
-
-
+        log_values(1024)
