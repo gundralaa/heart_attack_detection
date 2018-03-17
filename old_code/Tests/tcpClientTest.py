@@ -1,6 +1,5 @@
 import socket
 
-
 TCP_IP = '10.0.0.68'
 TCP_PORT = 5005
 BUFFER_SIZE = 1024
@@ -12,4 +11,4 @@ s.send(MESSAGE)
 data = s.recv(BUFFER_SIZE)
 s.close()
 
-print "received data:", data
+print("received data:", data)
